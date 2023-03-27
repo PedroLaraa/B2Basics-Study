@@ -1,0 +1,33 @@
+h1 {
+    color: aqua;
+}
+
+@media screen  and (max-width: 700px) {
+    h1 {
+        color: purple;
+    }
+}
+
+@media (min-width: 200px) {
+    h2 {
+        color: teal;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+    h3 {
+        font-size: 3em;
+    }
+}
+
+@media (orientation: landscape) {
+    h3 {
+        color: brown;
+    }
+}
+
+@media (max-width: 200px) or (orientation: landscape) {
+    h3 {
+        font-size: 4em;
+    }
+}
