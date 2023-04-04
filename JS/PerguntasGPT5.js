@@ -96,16 +96,74 @@ function segundoMaiorNumero(array) {
 
 var numeros = [10, 5, 20, 8, 15];
 var segundoMaior = segundoMaiorNumero(numeros);
-console.log(segundoMaior);
+// console.log(segundoMaior);
 
 // Crie uma função que receba um array de strings e retorne um novo array contendo apenas as strings que têm mais de 5 caracteres.
 
 const strMaiorQueCinco = (arr) => {
     let novoArr = [];
 
-    for(words in arr) {
-        if(arr[words].length > 5){
-            novoArr.push(arr)
-        }
-    }
-}
+    for (words in arr) {
+        if (arr[words].length > 5) {
+            novoArr.push(arr[words]);
+        };
+    };
+
+    return novoArr;
+};
+
+const arr = ['amanha', 'depois', 'uva', 'pera'];
+
+// console.log(strMaiorQueCinco(arr));
+
+// Crie uma função que receba um objeto com as propriedades nome, sobrenome e idade e retorne uma string com a seguinte mensagem: "Olá, meu nome é {nome} {sobrenome} e eu tenho {idade} anos."
+
+const saudacao = (obj) => {
+    return `Olá, meu nome é ${obj.nome} ${obj.sobrenome} e eu tenho ${obj.idade} anos`
+};
+
+const dadosPessoais = {
+    nome: 'José',
+    sobrenome: 'Silva',
+    idade: 30
+};
+
+// console.log(saudacao(dadosPessoais));
+
+// Crie uma função que receba um array de números e retorne a mediana desses números (ou seja, o valor que está exatamente no meio do array quando ele é ordenado).
+
+const mediana = (arrNum) => {
+    let soma = 0;
+
+    for (numeros in arrNum) {
+        soma += arrNum[numeros];
+    };
+
+    return soma / arrNum.length;
+
+};
+
+const nums = [1, 4, 9, 12, 43, 1023];
+
+// console.log(mediana(nums));
+
+// Crie uma função que receba uma string e retorne um objeto contendo o número de ocorrências de cada letra da string (por exemplo, se a string for "banana", o objeto retornado deve ser {b: 1, a: 3, n: 2}).
+
+const contadorDeRepeticoesDeLetra = (str) => {
+    let obj = {}
+
+    for (let i = 0; i < str.length; i++) {
+        const letra = str[i];
+
+        if (obj[letra]) {
+            obj[letra]++
+        } else {
+            obj[letra] = 1;
+        };
+    };
+    return obj;
+};
+
+const txt = 'caratinga';
+
+// console.log(contadorDeRepeticoesDeLetra(txt));
