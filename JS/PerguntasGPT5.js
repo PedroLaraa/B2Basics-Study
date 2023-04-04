@@ -80,4 +80,32 @@ var propriedadesOrdenadas = obterPropriedades(pessoa);
 
 // Crie uma função que receba um array de números e retorne o segundo maior número presente no array.
 
+function segundoMaiorNumero(array) {
+    var maior = -Infinity;
+    var segundoMaior = -Infinity;
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] > maior) {
+            segundoMaior = maior;
+            maior = array[i];
+        } else if (array[i] > segundoMaior && array[i] !== maior) {
+            segundoMaior = array[i];
+        }
+    }
+    return segundoMaior;
+}
 
+var numeros = [10, 5, 20, 8, 15];
+var segundoMaior = segundoMaiorNumero(numeros);
+console.log(segundoMaior);
+
+// Crie uma função que receba um array de strings e retorne um novo array contendo apenas as strings que têm mais de 5 caracteres.
+
+const strMaiorQueCinco = (arr) => {
+    let novoArr = [];
+
+    for(words in arr) {
+        if(arr[words].length > 5){
+            novoArr.push(arr)
+        }
+    }
+}
